@@ -22,7 +22,7 @@ Widget::~Widget()
 void Widget::slot_choose_model()
 {
     QString file_name = QFileDialog::getOpenFileName(nullptr, "open", ".", "*.obj");
-
+    ui->lineEdit_file->setText(file_name);
 
     if (file_name.isEmpty())
     {
@@ -51,6 +51,4 @@ void Widget::slot_choose_model()
     connect(ui->horizontalSlider_X, SIGNAL(valueChanged(int)), m_glWin, SLOT(slot_cam_X(int)));
     connect(ui->horizontalSlider_Y, SIGNAL(valueChanged(int)), m_glWin, SLOT(slot_cam_Y(int)));
     connect(ui->horizontalSlider_Z, SIGNAL(valueChanged(int)), m_glWin, SLOT(slot_cam_Z(int)));
-
-    ui->lineEdit_file->setText(file_name.remove(0,17));
 }

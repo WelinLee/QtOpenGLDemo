@@ -193,7 +193,6 @@ void GLWindow::paintGL()
 
 void GLWindow::resizeGL(int w, int h)
 {
-    qDebug() << "width: " << w << "height: " << h;
     m_proj.setToIdentity();
     m_proj.perspective(45.0f, GLfloat(w) / h, 0.01f, 100.0f);
 }
