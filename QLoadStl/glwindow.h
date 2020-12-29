@@ -32,11 +32,6 @@ public slots:
     void slot_cam_Y(int translateY);
     void slot_cam_Z(int translateZ);
 
-signals:
-    void xRotationChanged(int angle);
-    void yRotationChanged(int angle);
-    void zRotationChanged(int angle);
-
 protected:
     void initializeGL() override;
     void paintGL() override;
